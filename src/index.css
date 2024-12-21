@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 .timeline-wrapper {
   display: flex;
   justify-content: center;
@@ -158,5 +160,108 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 0.1px,
+      transparent 90px /* Increased grid size */
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 0.1px,
+      transparent 90px /* Increased grid size */
+    ),
+    radial-gradient(circle, #000304, #000000, #010021);
+  background-size: 100% 100%; /* Ensure the grid covers the entire background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.background-text {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: Garamond, serif;
+  font-weight: 600;
+  z-index: -1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  /* Adjust background text font size for small screens */
+  .background-text {
+    font-size: 8rem; /* Larger font for mobile */
+  }
+
+  /* Ensure the text and layout are responsive on small screens */
+  .text-3xl {
+    font-size: 2rem; /* Adjust for small screens */
+  }
+
+  .text-lg {
+    font-size: 1.125rem; /* Adjust for small screens */
+  }
+
+  /* Adjust container padding and text alignment */
+  #about {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Make sure the page uses the full height */
+  .min-h-screen {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust text size for very small screens */
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  /* Reduce the background text size even more on very small screens */
+  .background-text {
+    font-size: 4rem;
+    bottom: 65px;
+  }
+}
+
+.min-h-screen {
+  min-height: 100vh; /* Ensure the page uses full height */
+  overflow: hidden; /* Prevent scrolling on mobile */
+}
+
+.bg {
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 0.1px,
+      transparent 90px /* Increased grid size */
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 0.1px,
+      transparent 90px /* Increased grid size */
+    ),
+    radial-gradient(circle, #000304, #000000, #010021);
+  background-size: 100% 100%; /* Ensure the grid covers the entire background */
+  background-position: center;
+  color: white; /* Ensure the text is white on this background */
 }

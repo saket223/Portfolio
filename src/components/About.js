@@ -8,17 +8,18 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-hidden">
+      {/* About Section */}
       <div
         id="about"
-        className="flex flex-col items-center justify-center text-center text-white flex-grow"
+        className="flex flex-col items-center justify-center text-center text-white flex-grow px-4 sm:px-8 overflow-hidden"
       >
         <motion.h1
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-5xl font-bold"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold"
         >
           Hi, I'm <span className="text-blue-600">Saket</span>
         </motion.h1>
@@ -27,12 +28,16 @@ const About = () => {
           initial="hidden"
           animate="visible"
           transition={{ duration: 1, delay: 1 }}
-          className="text-xl mt-4"
+          className="text-lg sm:text-xl mt-4"
         >
           I create modern web applications with a focus on performance and user
           experience.
         </motion.p>
       </div>
+
+      {/* Background text */}
+      <div className="background-text">About Me</div>
+
       <Footer />
     </div>
   );

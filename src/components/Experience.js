@@ -70,10 +70,10 @@ const Experience = () => {
 
   return (
     <div>
-      <h2 className="text-xl text-blue-100 mt-24 text-center">
-        WHAT I HAVE DONE SO FAR
-      </h2>
-      <h1 className="text-5xl font-bold text-white mt-4 text-center">
+      <h1
+        className="text-6xl font-bold text-white text-center"
+        style={{ marginTop: "125px" }}
+      >
         Work Experience.
       </h1>
       <div className="timeline-wrapper mt-5 mb-10">

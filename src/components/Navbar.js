@@ -9,7 +9,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="fixed top-0 bg-black left-0 w-full text-white py-4 px-6 z-50">
+    <nav className="fixed top-0 left-0 w-full text-white py-4 px-6 z-50 bg">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo, vertical line, and name */}
         <div className="flex items-center space-x-4">
@@ -78,22 +78,33 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-3xl">
+        <div className="md:hidden relative z-60">
+          <button
+            onClick={toggleMenu}
+            className="text-3xl bg-transparent text-white border-none cursor-pointer"
+            style={{ zIndex: 100 }}
+          >
             {isOpen ? "X" : "☰"}
           </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden mt-4">
-          <ul className="flex flex-col items-center space-y-4">
+        <div className="md:hidden fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center bg-black bg-opacity-95 z-50">
+          {/* Close Button inside the menu */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-8 right-6 text-3xl text-white"
+            style={{ zIndex: 200 }} // Ensure it's above the menu content
+          >
+            X
+          </button>
+
+          <ul className="flex flex-col items-center justify-center gap-8 h-full">
             <li>
               <Link
                 to="/about"
-                className="text-lg hover:text-blue-400 transition-all duration-300"
+                className="text-xl hover:text-blue-400 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 About
@@ -102,7 +113,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/experience"
-                className="text-lg hover:text-blue-400 transition-all duration-300"
+                className="text-xl hover:text-blue-400 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Experience
@@ -111,7 +122,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/project"
-                className="text-lg hover:text-blue-400 transition-all duration-300"
+                className="text-xl hover:text-blue-400 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Projects
@@ -120,7 +131,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className="text-lg hover:text-blue-400 transition-all duration-300"
+                className="text-xl hover:text-blue-400 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
@@ -130,7 +141,7 @@ const Navbar = () => {
               <a
                 href="/Resume.pdf"
                 download="Saket_Arora_Resume.pdf"
-                className="flex items-center text-lg hover:text-blue-400 transition-all duration-300"
+                className="flex items-center text-xl hover:text-blue-400 transition-all duration-300"
               >
                 <FaDownload className="mr-2" />
                 Resume
@@ -141,7 +152,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/saket-arora-20748b217/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-lg hover:text-blue-400 transition-all duration-300"
+                className="flex items-center text-blue-400 text-xl hover:text-blue-500 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 <FaLinkedin className="mr-2" /> LinkedIn
