@@ -15,15 +15,17 @@ const TimelineEvent = ({ content, position }) => {
         <div className="flex justify-between items-center">
           <h1 className="text-white">{content.title}</h1>
           {content.date && (
-            <span className="text-gray-400">{content.date}</span>
+            <span className="text-gray-100">{content.date}</span>
           )}
         </div>
         <h2 className="text-gray-400">{content.company}</h2>
         <ul className="text-white list-disc ml-6">
           {content.description.split("\n").map((line, index) => (
-            <li key={index} className="mb-2">
-              {line}
-            </li>
+            <li
+              key={index}
+              className="mb-2"
+              dangerouslySetInnerHTML={{ __html: line }}
+            />
           ))}
         </ul>
         <a href={content.url} className="link text-white mt-4 block">
@@ -38,12 +40,10 @@ const Experience = () => {
   const exp1 = {
     title: "Full Stack Developer",
     company: "Phlo Systems Ltd., London, United Kingdom (Remote)",
-    description:
-      "Operated in an agile environment with daily stand-ups, tracked tickets in GitHub projects, formulated technical approaches, performed POCs, and maintained deadlines, ensuring on-time project delivery and operational efficiency.\n" +
-      "Developed an end-to-end document processing system using OpenAI Assistants and Weaviate APIs, achieving 80% extraction accuracy.\n" +
-      "Engineered a customer service chatbot that aggregated knowledge from vector stores and OpenAI, increasing issue resolution efficiency by 60%.\n" +
-      "Authored over 50 APIs, debugged platform bugs, and addressed database issues to ensure smooth performance and data integrity. Managed front-end modifications, improving user interface and experience across the platform.\n" +
-      "Enhanced AI assistant response accuracy by 70% through optimized prompt engineering.",
+    description: `Developed the <a href="https://finphlo-staging-frontend-app.azurewebsites.net/" target="_blank" rel="noopener noreferrer">FinPhlo</a> platform, an advanced loan management system tailored for trade finance professionals, offering end-to-end loan lifecycle support.
+          Developed an end-to-end document processing system using OpenAI Assistants and Weaviate APIs, achieving 80% extraction accuracy.
+          Engineered a customer service chatbot that aggregated knowledge from vector stores and OpenAI, increasing issue resolution efficiency by 60%.
+          Authored over 50 APIs, debugged platform bugs, and addressed database issues to ensure smooth performance and data integrity. Managed front-end modifications, improving user interface and experience across the platform.`,
     url: "https://www.phlo.io/",
     date: "July 2023 - Present",
   };
@@ -69,11 +69,8 @@ const Experience = () => {
   };
 
   return (
-    <div>
-      <h1
-        className="text-6xl font-bold text-white text-center"
-        style={{ marginTop: "125px" }}
-      >
+    <div className="main-container">
+      <h1 className="text-6xl font-bold text-white text-center">
         Work Experience.
       </h1>
       <div className="timeline-wrapper mt-5 mb-10">

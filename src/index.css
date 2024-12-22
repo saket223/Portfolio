@@ -265,3 +265,16 @@ body {
   background-position: center;
   color: white; /* Ensure the text is white on this background */
 }
+
+.main-container {
+  margin-top: 115px;
+}
+
+.hyperlink {
+  color: #ff9f55;
+  text-decoration: none;
+}
+
+.hyperlink:hover {
+  text-decoration: underline;
+}

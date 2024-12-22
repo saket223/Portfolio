@@ -70,7 +70,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/saket-arora-20748b217/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg flex items-center hover:text-blue-400 transition-all duration-300"
+                className="text-lg flex items-center text-blue-500 text-xl hover:text-blue-600 transition-all duration-300"
               >
                 <FaLinkedin className="mr-2" /> LinkedIn
               </a>
@@ -152,7 +152,7 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/saket-arora-20748b217/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-blue-400 text-xl hover:text-blue-500 transition-all duration-300"
+                className="flex items-center text-blue-500 text-xl transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 <FaLinkedin className="mr-2" /> LinkedIn
