@@ -165,17 +165,17 @@ body {
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 1px,
       transparent 0.1px,
-      transparent 90px /* Increased grid size */
+      transparent 90px
     ),
     repeating-linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 1px,
       transparent 0.1px,
-      transparent 90px /* Increased grid size */
+      transparent 90px
     ),
     radial-gradient(circle, #000304, #000000, #010021);
-  background-size: 100% 100%; /* Ensure the grid covers the entire background */
+  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,34 +197,29 @@ body {
 }
 
 @media (max-width: 700px) {
-  /* Adjust background text font size for small screens */
   .background-text {
-    font-size: 8rem; /* Larger font for mobile */
+    font-size: 8rem;
   }
 
-  /* Ensure the text and layout are responsive on small screens */
   .text-3xl {
-    font-size: 2rem; /* Adjust for small screens */
+    font-size: 2rem;
   }
 
   .text-lg {
-    font-size: 1.125rem; /* Adjust for small screens */
+    font-size: 1.125rem;
   }
 
-  /* Adjust container padding and text alignment */
   #about {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  /* Make sure the page uses the full height */
   .min-h-screen {
     min-height: 100vh;
   }
 }
 
 @media (max-width: 480px) {
-  /* Further adjust text size for very small screens */
   .text-3xl {
     font-size: 1.5rem;
   }
@@ -233,7 +228,6 @@ body {
     font-size: 1rem;
   }
 
-  /* Reduce the background text size even more on very small screens */
   .background-text {
     font-size: 4rem;
     bottom: 65px;
@@ -241,8 +235,8 @@ body {
 }
 
 .min-h-screen {
-  min-height: 100vh; /* Ensure the page uses full height */
-  overflow: hidden; /* Prevent scrolling on mobile */
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .bg {
@@ -251,19 +245,19 @@ body {
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 1px,
       transparent 0.1px,
-      transparent 90px /* Increased grid size */
+      transparent 90px
     ),
     repeating-linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.05) 0px,
       rgba(255, 255, 255, 0.05) 1px,
       transparent 0.1px,
-      transparent 90px /* Increased grid size */
+      transparent 90px
     ),
     radial-gradient(circle, #000304, #000000, #010021);
-  background-size: 100% 100%; /* Ensure the grid covers the entire background */
+  background-size: 100% 100%;
   background-position: center;
-  color: white; /* Ensure the text is white on this background */
+  color: white;
 }
 
 .main-container {
@@ -284,5 +278,80 @@ body {
 }
 
 .project-container {
-  margin-top: 135px;
+  margin-top: 130px;
+}
+
+.contact-container {
+  margin-top: 100px;
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-form {
+  padding: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-field,
+.textarea-field {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.textarea-field {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 10px;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.submit-btn:hover {
+  background-color: #0009ab;
+}
+
+@media (max-width: 700px) {
+  .contact-form {
+    width: 400px;
+    gap: 15px;
+  }
+
+  .contact-container {
+    margin-top: 100px;
+  }
+
+  .contact-form-container {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    width: 300px;
+    gap: 15px;
+  }
+
+  .contact-container {
+    margin-top: 100px;
+  }
+
+  .contact-form-container {
+    padding: 5px;
+  }
 }
