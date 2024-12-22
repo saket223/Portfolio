@@ -50,7 +50,7 @@ const About = () => {
           working on projects, I like exploring new tech trends, reading
           interesting articles, or relaxing with some good music. Feel free to
           check out my{" "}
-          <a href="#projects" className="hyperlink">
+          <a href="/projects" className="hyperlink">
             projects
           </a>
           , and{" "}

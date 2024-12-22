@@ -39,7 +39,7 @@ const Navbar = () => {
               Experience
             </Link>
             <Link
-              to="/project"
+              to="/projects"
               className="text-lg hover:text-blue-400 transition-all duration-300"
             >
               Projects
@@ -121,7 +121,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/project"
+                to="/projects"
                 className="text-xl hover:text-blue-400 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >

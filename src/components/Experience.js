@@ -11,15 +11,21 @@ const TimelineEvent = ({ content, position }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.0, ease: "easeOut" }}
     >
-      <div className="event-content border-4 border-white p-6">
+      <div className="event-content border-4 border-white p-4 sm:p-4 rounded-lg shadow-md ">
         <div className="flex justify-between items-center">
-          <h1 className="text-white">{content.title}</h1>
+          <h1 className="text-white text-sm sm:text-xl font-semibold">
+            {content.title}
+          </h1>
           {content.date && (
-            <span className="text-gray-100">{content.date}</span>
+            <span className="text-gray-300 text-xs sm:text-sm">
+              {content.date}
+            </span>
           )}
         </div>
-        <h2 className="text-gray-400">{content.company}</h2>
-        <ul className="text-white list-disc ml-6">
+        <h2 className="text-gray-400 text-xs sm:text-lg mt-2">
+          {content.company}
+        </h2>
+        <ul className="text-white list-disc ml-4 sm:ml-6 mt-4 text-xs sm:text-sm">
           {content.description.split("\n").map((line, index) => (
             <li
               key={index}
@@ -28,7 +34,12 @@ const TimelineEvent = ({ content, position }) => {
             />
           ))}
         </ul>
-        <a href={content.url} className="link text-white mt-4 block">
+        <a
+          href={content.url}
+          className="link text-white mt-4 block text-xs sm:text-sm font-medium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Visit Website
         </a>
       </div>
@@ -69,11 +80,11 @@ const Experience = () => {
   };
 
   return (
-    <div className="main-container">
-      <h1 className="text-6xl font-bold text-white text-center">
+    <div className="exp-container">
+      <h1 className="text-3xl sm:text-5xl font-bold text-white text-center">
         Work Experience.
       </h1>
-      <div className="timeline-wrapper mt-5 mb-10">
+      <div className="timeline-wrapper">
         <div className="timeline">
           <div className="timeline-line"></div>
           <TimelineEvent content={exp1} position="left" />
@@ -81,6 +92,7 @@ const Experience = () => {
           <TimelineEvent content={exp3} position="left" />
         </div>
       </div>
+      <div className="background-text">Work Experience</div>
       <Footer />
     </div>
   );
