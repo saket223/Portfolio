@@ -278,7 +278,7 @@ body {
 }
 
 .project-container {
-  margin-top: 130px;
+  margin-top: 110px;
 }
 
 .contact-container {
@@ -354,4 +354,12 @@ body {
   .contact-form-container {
     padding: 5px;
   }
+}
+
+.title-padding {
+  margin-bottom: 9px;
+}
+
+.tech-bg {
+  background-color: rgb(5, 3, 107);
 }
