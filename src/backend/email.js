@@ -14,9 +14,6 @@ transporter.verify((error, success) => {
     console.log("Transporter is ready to send emails!");
   }
 });
-console.log("EMAIL_USER:", process.env.REACT_APP_API_BASE_URL);
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
 
 const sendEmail = (name, email, message) => {
   const mailOptions = {
