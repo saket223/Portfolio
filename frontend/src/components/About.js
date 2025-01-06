@@ -54,7 +54,7 @@ const About = () => {
             projects
           </a>
           , and{" "}
-          <a href="#contact" className="hyperlink">
+          <a href="/contact" className="hyperlink">
             contact me
           </a>{" "}
           — I'm always excited to connect and collaborate!
