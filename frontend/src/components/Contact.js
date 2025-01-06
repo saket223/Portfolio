@@ -11,13 +11,13 @@ const Contact = () => {
     e.preventDefault();
 
     const response = await fetch(
-      `${process.env.REACT_APP_API_BASE_URL}/api/send-email`,
+      `${process.env.REACT_APP_API_BASE_URL}/api/index`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        credentials: 'include',
+        credentials: "include",
         body: JSON.stringify({ name, email, message }),
       }
     );
