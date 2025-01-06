@@ -6,6 +6,7 @@ const corsMiddleware = cors({
   origin: "https://saket-portfolio-v1.vercel.app",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
+  credentials: true
 });
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
