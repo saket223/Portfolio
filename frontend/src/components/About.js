@@ -29,7 +29,7 @@ const About = () => {
           transition={{ duration: 1, delay: 1 }}
           className="text-sm sm:text-base mt-6 max-w-3xl"
         >
-          A passionate web developer who loves building user-friendly and
+          An enthusiastic web developer dedicated to crafting user-friendly and
           efficient digital solutions. Whether it's creating clean, responsive
           designs or solving complex technical problems, I enjoy turning ideas
           into reality through code.
